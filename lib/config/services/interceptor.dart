@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_json/pretty_json.dart';
-import 'package:e_movie/config/util/app_config.dart';
+import 'package:my_cashier/config/util/app_config.dart';
 
 class AppInterceptors extends InterceptorsWrapper {
   Response? tempResponse;

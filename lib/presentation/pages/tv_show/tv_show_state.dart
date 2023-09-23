@@ -1,4 +1,4 @@
-import 'package:e_movie/data/model/tv_show.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 

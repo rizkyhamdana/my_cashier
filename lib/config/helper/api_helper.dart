@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:e_movie/config/services/interceptor.dart';
-import 'package:e_movie/config/util/app_config.dart';
+import 'package:my_cashier/config/services/interceptor.dart';
+import 'package:my_cashier/config/util/app_config.dart';
 
 @lazySingleton
 class ApiHelper {

@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:e_movie/config/helper/api_helper.dart';
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/config/util/constant.dart';
-import 'package:e_movie/domain/entities/global.dart';
+import 'package:my_cashier/config/helper/api_helper.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/config/util/constant.dart';
+import 'package:my_cashier/domain/entities/global.dart';
 
 @lazySingleton
 class CallApiService {

@@ -1,5 +1,5 @@
-import 'package:e_movie/config/util/app_theme.dart';
-import 'package:e_movie/presentation/widget/spacing.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
+import 'package:my_cashier/presentation/widget/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 

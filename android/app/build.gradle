@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    namespace "com.example.e_movie"
+    namespace "com.example.my_cashier"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

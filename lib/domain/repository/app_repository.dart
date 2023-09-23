@@ -1,5 +1,5 @@
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/data/model/tv_show.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
 
 abstract class AppRepository {
   Future<MovieResponse> getListMovie(String type);

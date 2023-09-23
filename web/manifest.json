@@ -1,6 +1,6 @@
 {
-    "name": "e_movie",
-    "short_name": "e_movie",
+    "name": "my_cashier",
+    "short_name": "my_cashier",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

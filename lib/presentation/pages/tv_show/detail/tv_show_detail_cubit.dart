@@ -1,8 +1,8 @@
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/config/util/utility.dart';
-import 'package:e_movie/data/model/tv_show.dart';
-import 'package:e_movie/domain/repository/app_repository.dart';
-import 'package:e_movie/presentation/pages/tv_show/detail/tv_show_detail_state.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/config/util/utility.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
+import 'package:my_cashier/domain/repository/app_repository.dart';
+import 'package:my_cashier/presentation/pages/tv_show/detail/tv_show_detail_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 

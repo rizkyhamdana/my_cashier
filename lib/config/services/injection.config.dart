@@ -9,18 +9,19 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:e_movie/config/helper/api_helper.dart' as _i3;
-import 'package:e_movie/config/services/call_api_service.dart' as _i6;
-import 'package:e_movie/data/repository/app_repository_impl.dart' as _i5;
-import 'package:e_movie/domain/entities/global.dart' as _i7;
-import 'package:e_movie/domain/repository/app_repository.dart' as _i4;
-import 'package:e_movie/presentation/pages/movie/detail/movie_detail_cubit.dart'
+import 'package:my_cashier/config/helper/api_helper.dart' as _i3;
+import 'package:my_cashier/config/services/call_api_service.dart' as _i6;
+import 'package:my_cashier/data/repository/app_repository_impl.dart' as _i5;
+import 'package:my_cashier/domain/entities/global.dart' as _i7;
+import 'package:my_cashier/domain/repository/app_repository.dart' as _i4;
+import 'package:my_cashier/presentation/pages/movie/detail/movie_detail_cubit.dart'
     as _i9;
-import 'package:e_movie/presentation/pages/movie/movie_cubit.dart' as _i8;
-import 'package:e_movie/presentation/pages/tv_show/detail/tv_show_detail_cubit.dart'
+import 'package:my_cashier/presentation/pages/movie/movie_cubit.dart' as _i8;
+import 'package:my_cashier/presentation/pages/tv_show/detail/tv_show_detail_cubit.dart'
     as _i11;
-import 'package:e_movie/presentation/pages/tv_show/tv_show_cubit.dart' as _i10;
-import 'package:e_movie/presentation/pages/watchlist/watchlist_cubit.dart'
+import 'package:my_cashier/presentation/pages/tv_show/tv_show_cubit.dart'
+    as _i10;
+import 'package:my_cashier/presentation/pages/watchlist/watchlist_cubit.dart'
     as _i12;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;

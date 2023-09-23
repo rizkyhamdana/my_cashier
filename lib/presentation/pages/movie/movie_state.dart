@@ -1,4 +1,4 @@
-import 'package:e_movie/data/model/movie.dart';
+import 'package:my_cashier/data/model/movie.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 

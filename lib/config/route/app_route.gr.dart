@@ -9,18 +9,18 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i8;
-import 'package:e_movie/data/model/movie.dart' as _i10;
-import 'package:e_movie/data/model/tv_show.dart' as _i11;
-import 'package:e_movie/presentation/pages/home/home_view.dart' as _i1;
-import 'package:e_movie/presentation/pages/movie/detail/movie_detail_view.dart'
+import 'package:my_cashier/data/model/movie.dart' as _i10;
+import 'package:my_cashier/data/model/tv_show.dart' as _i11;
+import 'package:my_cashier/presentation/pages/home/home_view.dart' as _i1;
+import 'package:my_cashier/presentation/pages/movie/detail/movie_detail_view.dart'
     as _i6;
-import 'package:e_movie/presentation/pages/movie/movie_view.dart' as _i2;
-import 'package:e_movie/presentation/pages/splashscreen/splash_screen_view.dart'
+import 'package:my_cashier/presentation/pages/movie/movie_view.dart' as _i2;
+import 'package:my_cashier/presentation/pages/splashscreen/splash_screen_view.dart'
     as _i4;
-import 'package:e_movie/presentation/pages/tv_show/detail/tv_show_detail_view.dart'
+import 'package:my_cashier/presentation/pages/tv_show/detail/tv_show_detail_view.dart'
     as _i7;
-import 'package:e_movie/presentation/pages/tv_show/tv_show_view.dart' as _i3;
-import 'package:e_movie/presentation/pages/watchlist/watchlist_view.dart'
+import 'package:my_cashier/presentation/pages/tv_show/tv_show_view.dart' as _i3;
+import 'package:my_cashier/presentation/pages/watchlist/watchlist_view.dart'
     as _i5;
 import 'package:flutter/material.dart' as _i9;
 

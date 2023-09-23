@@ -1,8 +1,8 @@
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/config/util/constant.dart';
-import 'package:e_movie/config/util/utility.dart';
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/domain/repository/app_repository.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/config/util/constant.dart';
+import 'package:my_cashier/config/util/utility.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/domain/repository/app_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 

@@ -1,4 +1,4 @@
-import 'package:e_movie/config/util/constant.dart';
+import 'package:my_cashier/config/util/constant.dart';
 
 String imagePaths(String path) {
   return "assets/images/$path.png";

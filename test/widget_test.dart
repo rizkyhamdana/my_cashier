@@ -7,8 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/presentation/pages/home/home_view.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/presentation/pages/home/home_view.dart';
 
 void main() {
   setUp(() => configureDependencies());

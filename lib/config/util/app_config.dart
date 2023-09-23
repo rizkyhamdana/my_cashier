@@ -1,4 +1,4 @@
-import 'package:e_movie/config/util/constant.dart';
+import 'package:my_cashier/config/util/constant.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

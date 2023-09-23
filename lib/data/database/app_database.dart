@@ -1,6 +1,6 @@
-import 'package:e_movie/config/helper/database_helper.dart';
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/data/model/tv_show.dart';
+import 'package:my_cashier/config/helper/database_helper.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
 import 'package:sqflite/sqflite.dart';
 
 class AppDatabase {

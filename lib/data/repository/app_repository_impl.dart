@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:e_movie/data/database/app_database.dart';
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/data/model/tv_show.dart';
+import 'package:my_cashier/data/database/app_database.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
 import 'package:injectable/injectable.dart';
-import 'package:e_movie/config/services/call_api_service.dart';
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/config/util/constant.dart';
-import 'package:e_movie/config/util/utility.dart';
-import 'package:e_movie/domain/repository/app_repository.dart';
+import 'package:my_cashier/config/services/call_api_service.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/config/util/constant.dart';
+import 'package:my_cashier/config/util/utility.dart';
+import 'package:my_cashier/domain/repository/app_repository.dart';
 
 @LazySingleton(as: AppRepository)
 class AppRepositoryImpl implements AppRepository {

@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:e_movie/config/route/app_route.gr.dart';
-import 'package:e_movie/config/util/app_theme.dart';
+import 'package:my_cashier/config/route/app_route.gr.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
 
 @RoutePage()
 class SplashScreenPage extends StatefulWidget {

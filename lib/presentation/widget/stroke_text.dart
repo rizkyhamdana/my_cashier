@@ -1,4 +1,4 @@
-import 'package:e_movie/config/util/app_theme.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class StrokeText extends StatelessWidget {

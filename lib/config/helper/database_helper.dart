@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:e_movie/config/util/constant.dart';
+import 'package:my_cashier/config/util/constant.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';

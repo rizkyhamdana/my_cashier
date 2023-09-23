@@ -698,13 +698,13 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "e_movie",
+      "name": "my_cashier",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-09-23T07:41:32.244051Z",
+  "generated": "2023-09-23T12:23:11.003104Z",
   "generator": "pub",
   "generatorVersion": "3.1.2"
 }

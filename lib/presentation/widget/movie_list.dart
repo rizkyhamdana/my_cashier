@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:e_movie/config/route/app_route.gr.dart';
-import 'package:e_movie/config/util/app_theme.dart';
-import 'package:e_movie/config/util/custom_widget.dart';
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/presentation/widget/spacing.dart';
+import 'package:my_cashier/config/route/app_route.gr.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
+import 'package:my_cashier/config/util/custom_widget.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/presentation/widget/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 

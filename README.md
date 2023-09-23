@@ -36,7 +36,7 @@ Make sure you have Flutter SDK installed on your system. If not, refer to the of
 Download or clone this repo by using the link below:
 
 ```
-https://github.com/rizkyhamdana/e_movie.git
+https://github.com/rizkyhamdana/my_cashier.git
 ```
 
 **Step 2:**

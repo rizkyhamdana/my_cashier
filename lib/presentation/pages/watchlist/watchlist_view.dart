@@ -1,16 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:e_movie/config/services/injection.dart';
-import 'package:e_movie/config/util/app_theme.dart';
-import 'package:e_movie/data/model/movie.dart';
-import 'package:e_movie/data/model/tv_show.dart';
-import 'package:e_movie/presentation/pages/watchlist/watchlist_cubit.dart';
-import 'package:e_movie/presentation/pages/watchlist/watchlist_state.dart';
-import 'package:e_movie/presentation/widget/empty_data.dart';
-import 'package:e_movie/presentation/widget/list_loading.dart';
-import 'package:e_movie/presentation/widget/movie_list.dart';
-import 'package:e_movie/presentation/widget/spacing.dart';
-import 'package:e_movie/presentation/widget/tv_show_list.dart';
+import 'package:my_cashier/config/services/injection.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
+import 'package:my_cashier/data/model/movie.dart';
+import 'package:my_cashier/data/model/tv_show.dart';
+import 'package:my_cashier/presentation/pages/watchlist/watchlist_cubit.dart';
+import 'package:my_cashier/presentation/pages/watchlist/watchlist_state.dart';
+import 'package:my_cashier/presentation/widget/empty_data.dart';
+import 'package:my_cashier/presentation/widget/list_loading.dart';
+import 'package:my_cashier/presentation/widget/movie_list.dart';
+import 'package:my_cashier/presentation/widget/spacing.dart';
+import 'package:my_cashier/presentation/widget/tv_show_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
