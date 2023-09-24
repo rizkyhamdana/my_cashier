@@ -5,10 +5,10 @@ class AppTheme {
 
   static const blackShadow = Color.fromRGBO(225, 224, 225, 1.0);
   static const Color blackColor = Color(0xFF383838);
-  static const Color bgColor = Color(0xFF1F282B);
+  static const Color bgColor = Color(0xFFF4F4F4);
   static const Color bgColor2 = Color(0xFF121518);
   static const Color blackColor2 = Color(0xFF67686D);
-  static const Color blue1 = Color(0xFF0296E5);
+  static const Color blue1 = Color(0xFF487FFF);
   static const Color blue2 = Color(0xFF689FFF);
   static const Color white = Color(0xFFFFFFFF);
 
@@ -111,6 +111,20 @@ class AppTheme {
         fontFamily: fontName,
         fontWeight: FontWeight.w500,
         fontSize: 20,
+        color: color,
+        decoration: decoration,
+        fontStyle: fontStyle,
+      );
+
+  static TextStyle sidebarTextStyle({
+    Color? color = blackColor,
+    TextDecoration? decoration,
+    FontStyle? fontStyle,
+  }) =>
+      TextStyle(
+        fontFamily: fontName,
+        fontWeight: FontWeight.w500,
+        fontSize: 13,
         color: color,
         decoration: decoration,
         fontStyle: fontStyle,

@@ -1,18 +1,11 @@
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:my_cashier/config/services/injection.dart';
-import 'package:my_cashier/config/util/app_theme.dart';
-import 'package:my_cashier/presentation/pages/movie/movie_cubit.dart';
-import 'package:my_cashier/presentation/pages/movie/movie_view.dart';
-import 'package:my_cashier/presentation/pages/tv_show/tv_show_cubit.dart';
-import 'package:my_cashier/presentation/pages/tv_show/tv_show_view.dart';
-import 'package:my_cashier/presentation/pages/watchlist/watchlist_cubit.dart';
-import 'package:my_cashier/presentation/pages/watchlist/watchlist_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/date_symbol_data_local.dart';
+import 'package:my_cashier/config/util/app_theme.dart';
+import 'package:my_cashier/config/util/custom_widget.dart';
+import 'package:my_cashier/presentation/pages/home/sidebar/sidebar_view.dart';
+import 'package:sidebarx/sidebarx.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {
@@ -23,50 +16,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _pageController = PageController(initialPage: 0);
-  final _controller = NotchBottomBarController(index: 0);
-
-  var cubit = getIt<MovieCubit>();
-
-  final List<Widget> bottomBarPages = [
-    const MoviePage(),
-    const TvShowPage(),
-    const WatchlistPage(),
-  ];
+  int index = 0;
+  late SidebarXController _controller;
+  final _key = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
-    super.initState();
-    initializeDateFormatting();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
-  }
+    _controller = SidebarXController(selectedIndex: 0, extended: true);
 
-  @override
-  Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => getIt<MovieCubit>(),
-          child: const MoviePage(),
-        ),
-        BlocProvider(
-          create: (context) => getIt<TvShowCubit>(),
-          child: const TvShowPage(),
-        ),
-        BlocProvider(
-          create: (context) => getIt<WatchListCubit>(),
-          child: const TvShowPage(),
-        ),
-      ],
-      child: WillPopScope(
-        onWillPop: () async {
+    _controller.addListener(() {
+      setState(() {
+        if (_controller.selectedIndex == 5) {
+          _controller.selectIndex(index);
           AwesomeDialog(
             context: context,
             dialogType: DialogType.noHeader,
-            animType: AnimType.rightSlide,
+            animType: AnimType.scale,
             dialogBackgroundColor: AppTheme.bgColor,
-            titleTextStyle: AppTheme.subtitle2(color: AppTheme.white),
-            descTextStyle: AppTheme.body3(color: AppTheme.white),
+            titleTextStyle: AppTheme.subtitle2(color: AppTheme.blackColor),
+            descTextStyle: AppTheme.body3(color: AppTheme.blackColor),
             btnOkColor: AppTheme.blue1,
             buttonsTextStyle: AppTheme.subtitle3(color: AppTheme.white),
             title: 'Close App?',
@@ -78,66 +46,168 @@ class _HomePageState extends State<HomePage> {
               SystemNavigator.pop();
             },
           ).show();
-          // Return 'false' to disable the back button press
-          return Future.value(false);
-        },
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.grey,
-            body: PageView(
-              controller: _pageController,
-              physics: const NeverScrollableScrollPhysics(),
-              children: List.generate(
-                  bottomBarPages.length, (index) => bottomBarPages[index]),
-            ),
-            extendBody: true,
-            bottomNavigationBar: AnimatedNotchBottomBar(
-              notchBottomBarController: _controller,
-              color: AppTheme.bgColor2,
-              notchColor: AppTheme.bgColor2,
-              showLabel: false,
-              showShadow: false,
-              bottomBarItems: const [
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.movie_creation_outlined,
-                    color: Colors.blueGrey,
+        } else {
+          setState(() {
+            index = _controller.selectedIndex;
+          });
+        }
+      });
+    });
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Builder(
+      builder: (context) {
+        final isSmallScreen = MediaQuery.of(context).size.width < 600;
+        return Scaffold(
+          key: _key,
+          backgroundColor: AppTheme.bgColor,
+          appBar: isSmallScreen
+              ? AppBar(
+                  backgroundColor: AppTheme.white,
+                  title: Image.asset(
+                    'assets/images/ic_logo_app.png',
+                    height: 32,
                   ),
-                  activeItem: Icon(
-                    Icons.movie_creation_outlined,
-                    color: AppTheme.blue1,
+                  leading: Container(
+                    margin: const EdgeInsets.all(12),
+                    child: SizedBox(
+                      width: 32,
+                      height: 32,
+                      child: MaterialButton(
+                        color: AppTheme.white,
+                        padding: const EdgeInsets.all(4),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                        onPressed: () {
+                          _key.currentState?.openDrawer();
+                        },
+                        child: ImageIcon(
+                          AssetImage(imagePaths('ic_menu')),
+                          size: 20,
+                        ),
+                      ),
+                    ),
                   ),
-                  itemLabel: 'Movie',
+                  actions: [
+                    Container(
+                      margin: const EdgeInsets.all(12),
+                      child: SizedBox(
+                        width: 32,
+                        height: 32,
+                        child: MaterialButton(
+                          color: AppTheme.white,
+                          padding: const EdgeInsets.all(4),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          onPressed: () {},
+                          child: ImageIcon(
+                            AssetImage(imagePaths('ic_cart')),
+                            size: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              : null,
+          drawer: Sidebar(
+            controller: _controller,
+          ),
+          body: Row(
+            children: [
+              if (!isSmallScreen)
+                Sidebar(
+                  controller: _controller,
                 ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.live_tv,
-                    color: Colors.blueGrey,
+              Expanded(
+                child: Center(
+                  child: _ScreensExample(
+                    controller: _controller,
                   ),
-                  activeItem: Icon(
-                    Icons.live_tv,
-                    color: AppTheme.blue1,
-                  ),
-                  itemLabel: 'TV Show',
                 ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.bookmark_border_rounded,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.bookmark_border_rounded,
-                    color: AppTheme.blue1,
-                  ),
-                  itemLabel: 'Watch List',
-                ),
-              ],
-              onTap: (int index) {
-                _pageController.addListener(() {});
-                _pageController.jumpToPage(index);
-              },
-            )),
-      ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
+
+class _ScreensExample extends StatelessWidget {
+  const _ScreensExample({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
+
+  final SidebarXController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return AnimatedBuilder(
+      animation: controller,
+      builder: (context, child) {
+        final pageTitle = _getTitleByIndex(controller.selectedIndex);
+        switch (controller.selectedIndex) {
+          case 0:
+            return ListView.builder(
+              padding: const EdgeInsets.only(top: 10),
+              itemBuilder: (context, index) => Container(
+                height: 100,
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 10, right: 10, left: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AppTheme.blue1,
+                  boxShadow: const [BoxShadow()],
+                ),
+              ),
+            );
+
+          case 5:
+            return Text(
+              pageTitle,
+              style: theme.textTheme.headlineSmall,
+            );
+          default:
+            return Text(
+              pageTitle,
+              style: theme.textTheme.headlineSmall,
+            );
+        }
+      },
+    );
+  }
+}
+
+String _getTitleByIndex(int index) {
+  switch (index) {
+    case 0:
+      return 'Home';
+    case 1:
+      return 'Search';
+    case 2:
+      return 'People';
+    case 3:
+      return 'Favorites';
+    case 4:
+      return 'Custom iconWidget';
+    case 5:
+      return 'Profile';
+
+    default:
+      return 'Not found page';
+  }
+}
+
+const primaryColor = Color(0xFF685BFF);
+const canvasColor = Color(0xFF2E2E48);
+const scaffoldBackgroundColor = Color(0xFF464667);
+const accentCanvasColor = Color(0xFF3E3E61);
+const white = Colors.white;
+final actionColor = const Color(0xFF5F5FA7).withOpacity(0.6);
+const divider = Divider(color: AppTheme.blackColor2, height: 1);
