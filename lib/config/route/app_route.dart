@@ -11,11 +11,5 @@ class AppRouter extends $AppRouter {
           initial: true,
         ),
         AutoRoute(page: HomePage.page),
-        AutoRoute(page: MoviePage.page),
-        AutoRoute(page: TvShowPage.page),
-        AutoRoute(page: TvShowDetailPage.page),
-        AutoRoute(
-          page: MovieDetailPage.page,
-        ),
       ];
 }

@@ -66,6 +66,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: AppTheme.bgColor,
           appBar: isSmallScreen
               ? AppBar(
+                  elevation: 0,
                   backgroundColor: AppTheme.white,
                   title: Image.asset(
                     'assets/images/ic_logo_app.png',
