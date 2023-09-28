@@ -19,7 +19,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 4), () {
-      context.router.replace(const HomePage());
+      context.router.replace(const BasePage());
     });
   }
 

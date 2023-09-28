@@ -96,7 +96,7 @@ class AppTheme {
       TextStyle(
         fontFamily: fontName,
         fontWeight: FontWeight.w600,
-        fontSize: 14,
+        fontSize: 12,
         color: color,
         decoration: decoration,
         fontStyle: fontStyle,
@@ -152,7 +152,7 @@ class AppTheme {
       TextStyle(
         fontFamily: fontName,
         fontWeight: FontWeight.w400,
-        fontSize: 14,
+        fontSize: 12,
         color: color,
         decoration: decoration,
         fontStyle: fontStyle,

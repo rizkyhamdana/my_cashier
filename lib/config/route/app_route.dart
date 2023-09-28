@@ -10,6 +10,7 @@ class AppRouter extends $AppRouter {
           page: SplashRoutePage.page,
           initial: true,
         ),
+        AutoRoute(page: BasePage.page),
         AutoRoute(page: HomePage.page),
       ];
 }
