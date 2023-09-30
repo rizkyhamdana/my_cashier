@@ -7,7 +7,7 @@ class AppTheme {
   static const Color blackColor = Color(0xFF383838);
   static const Color bgColor = Color(0xFFF4F4F4);
   static const Color bgColor2 = Color(0xFF121518);
-  static const Color blackColor2 = Color(0xFF67686D);
+  static const Color blackColor2 = Color(0xFF7B7B7B);
   static const Color blue1 = Color(0xFF487FFF);
   static const Color blue2 = Color(0xFF689FFF);
   static const Color white = Color(0xFFFFFFFF);
@@ -66,7 +66,7 @@ class AppTheme {
   }) =>
       TextStyle(
         fontFamily: fontName,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
         fontSize: 18,
         color: color,
         height: height,
@@ -81,8 +81,8 @@ class AppTheme {
   }) =>
       TextStyle(
         fontFamily: fontName,
-        fontWeight: FontWeight.w600,
-        fontSize: 16,
+        fontWeight: FontWeight.w700,
+        fontSize: 14,
         color: color,
         decoration: decoration,
         fontStyle: fontStyle,
@@ -152,7 +152,7 @@ class AppTheme {
       TextStyle(
         fontFamily: fontName,
         fontWeight: FontWeight.w400,
-        fontSize: 12,
+        fontSize: 11,
         color: color,
         decoration: decoration,
         fontStyle: fontStyle,

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:intl/intl.dart';
 import 'package:my_cashier/config/util/constant.dart';
 
 class Utility {
@@ -60,5 +61,13 @@ class Utility {
     } else {
       return "An error occurred in App";
     }
+  }
+
+  static String toNumberPoint(double amount) {
+    String result = '';
+    final currencyFormatter = NumberFormat('#,###', 'ID');
+    result = currencyFormatter.format(amount);
+
+    return 'Rp$result';
   }
 }
