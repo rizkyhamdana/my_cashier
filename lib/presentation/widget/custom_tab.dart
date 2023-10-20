@@ -27,8 +27,11 @@ class CustomTab extends StatelessWidget {
       height: 48,
       child: MaterialButton(
         elevation: 0,
+        hoverColor: AppTheme.white,
         onPressed: buttonTap,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+        ),
         color: backgroundColor,
         shape: RoundedRectangleBorder(
           side: borderSide,
